@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(226, 43%, 10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "crds c1 c2 c3"
+               "crds c4 c5 c6";
+    gap: 1.5rem;
+}
+
+.crds{
+    grid-area: crds;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: .5rem;
+}
+
+.img-txt{
+    border-radius: .5rem;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    background-color: hsl(246, 80%, 60%);
+}
+
+.img-txt img{
+    width: 5rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.txt{margin-left: 0;}
+
+.txt p{
+    margin-bottom: 0;
+    color: hsl(236, 100%, 87%);
+    margin-top: 2rem;
+}
+
+.img-txt .txt h1{
+    font-weight: 300;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-top: 0rem;
+}
+
+.btns{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.btns a{
+    margin-bottom: 1.5rem;
+    color: hsl(236, 100%, 87%);
+    transition: .2s all ease-in-out;
+}
+
+.btns a.active{color: #fff;}
+
+.btns a:hover{
+    color: #fff;
+    transition: .2s all ease-in-out;
+}
+
+.btns a:last-of-type{margin-bottom: 0;}
+
+.card{border-radius: .5rem;}
+
+.card .cimg{
+    height: 3.7rem;
+    background: no-repeat right 1rem center;
+    border-radius: .5rem .5rem 0 0;
+    margin-bottom: -.8rem;
+}
+
+.card .ctxt{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.card .ctxt:hover{
+    background-color: hsl(228, 45%, 44%);
+    transition: .2s all ease-in-out;
+}
+
+.ctext{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ctext h4{
+    font-size: 1.125rem;
+    color: #fff;
+    font-weight: 500;
+    margin: 0;
+}
+
+.ctext svg:hover .ellipsis{fill: #fff;}
+
+.ctime{margin-top: 1.2rem;}
+
+.previoushrs p{
+    color: #fff;
+    font-weight: 300;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.prev{
+    color: hsl(236, 100%, 87%);
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.c1{grid-area: c1;}
+
+.c1 .cimg{
+    background-color:#ff8c66;
+    background-image: url("./images/icon-work.svg");
+}
+
+.c2{grid-area: c2;}
+
+.c2 .cimg{
+    background-color:hsl(195, 74%, 62%);
+    background-image: url("./images/icon-play.svg");
+}
+
+.c3{grid-area: c3;}
+
+.c3 .cimg{
+    background-color:hsl(348, 100%, 68%);
+    background-image: url("./images/icon-study.svg");
+}
+
+.c4{grid-area: c4;}
+
+.c4 .cimg{
+    background-color:hsl(145, 58%, 55%);
+    background-image: url("./images/icon-exercise.svg");
+}
+
+.c5{grid-area: c5;}
+
+.c5 .cimg{
+    background-color:hsl(264, 64%, 52%);
+    background-image: url("./images/icon-social.svg");
+}
+
+.c6{grid-area: c6;}
+
+.c6 .cimg{
+    background-color:hsl(43, 84%, 65%);
+    background-image: url("./images/icon-self-care.svg");
+}
+
+a{text-decoration: none;}
+
+.attribution { 
+    margin-top: 2rem;
+    font-size: 1.2rem; 
+    text-align: center; 
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media all and (max-width:900px){
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "crds c1"
+                             "crds c2"
+                             "c3 c5"
+                             "c4 c6";
+    }
+}
+@media all and (max-width:500px){
+    main{width: 80%;height: 125vh;}
+
+    .cards{width: 100%;}
+
+    .img-txt{
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        justify-content: center;
+
+    }
+
+    .img-txt img{width: 3.5rem;}
+
+    .txt{margin-left: 0.5rem;}
+
+    .img-txt .txt h1{font-size: 1.3rem;}
+
+    .btns{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem 1rem;
+    }
+    .btns a{margin-bottom: 0;}
+
+    .cards{
+        grid-template-columns: 1fr;
+        grid-template-areas: "crds"
+                             "crds"
+                             "c1"
+                             "c2"
+                             "c3"
+                             "c4"
+                             "c5"
+                             "c6";
+    }
+
+    .card .cimg{height: 3rem;}
+
+    .ctime{
+        display: flex;
+        margin-top: 0;
+        justify-content: space-between;
+    }
+
+    .previoushrs p{font-size: 2rem; }
+
+    .prev{font-size: .8rem;}
+}
